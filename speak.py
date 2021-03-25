@@ -77,13 +77,13 @@ def main():
         strTime = datetime.datetime.now().strftime("%H:%m:%S")
         speak(f"the tie is {strTime}")
     elif 'open code' in query.lower():
-        vsPath = "C:\\Users\\ankit\\AppData\\Local\\Program\\Microsoft VS Code\\Code.exe"
+        vsPath = "C:\\Users\\AppData\\Local\\Program\\Microsoft VS Code\\Code.exe"
         os.startfile(vsPath)
     elif 'email' in query.lower():
         try:
             speak("What should I send")
             content = takeCommand()
-            to = "anshumishra1199@gmail.com"
+            to = "recipientemail@gmail.com"
             sendEmail(to,content)
             speak("Email has been sent successfully")
         except Exception as e :
